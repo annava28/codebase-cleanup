@@ -43,21 +43,21 @@ SENDGRID_API_KEY="SG...."
 Run the game:
 
 ```sh
-python app/game.py
+python -m app.game
 ```
 
 Run the inventory report:
 ```sh
-python app/groceries.py
+python -m app.groceries
 ```
 
 Run the stocks report:
 
 ```sh
-python app/stocks.py
+python -m app.stocks
 ```
 
 Run the cryptoreport:
 ```sh
-python app/crypto.py
+python -m app.crypto
 ```
