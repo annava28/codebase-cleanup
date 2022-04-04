@@ -1,19 +1,15 @@
-
-
-
-
 from random import choice
+from app.utils import determine_winner
+
+valid_selections = ["rock", "paper", "scissors"] # only have to update in one place
 
 #
 # USER SELECTION
 #
 
-options = ["rock", "paper", "scissors"]
-
-
 u = input("Please choose one of 'Rock', 'Paper', or 'Scissors': ").lower()
 print("USER CHOICE:", u)
-if u not in options :
+if u not in valid_selections:
     print("OOPS, TRY AGAIN")
     exit()
 
@@ -21,33 +17,18 @@ if u not in options :
 # COMPUTER SELECTION
 #
 
-c = choice(options)
+c = choice(valid_selections)
 print("COMPUTER CHOICE:", c)
 
 #
-# DETERMINATION OF WINNER
+# WINNER DETERMINATION
 #
 
-if u == "rock":
-    if c == "rock":
-        print("It's a tie!")
-    if c == "paper":
-        print("The computer wins")
-    if c == "scissors":
-        print("You win!")
+winner = determine_winner(u,c)
+if winner == u:
+    print("YOU WON")
+elif winner == c:
+    print("COMPUTER WON")
+else:
+    print("TIE")
 
-if u == "paper":
-    if c == "rock":
-        print("You win!")
-    if c == "paper":
-        print("It's a tie!")
-    if c == "scissors":
-        print("The computer wins")
-
-if u == "scissors":
-    if c == "rock":
-        print("The computer wins")
-    if c == "paper":
-        print("You win!")
-    if c == "scissors":
-        print("It's a tie!")
