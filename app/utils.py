@@ -4,23 +4,19 @@
 
 
 def to_usd(my_price):
-    """
-    This is a docstring. It tells us what this function is about.
-    What its responsibilities ar.
-    What the params are ab9out.
-    What datatypes the params are.
-    What this function will return.
-    Example of invoking the function.
-
-    Invoke like this: to_usd(9.9999)
-    """
-    
     return f"${my_price:,.2f}"
 
 
 from random import choice
 
 def determine_winner(user_choice, computer_choice):
+    """
+    This function considers both the user's choice and the computer's
+    randomly generated choice, to determine the winner in a game
+    of Rock, Paper, Scissors. 
+    Invoking the function: determine_winner(--variable for user's choice--, --variable for computer choice--)
+    """
+
     #return "paper"
     winners = {
         "rock": {
