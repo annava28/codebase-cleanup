@@ -19,7 +19,6 @@ else:
     csv_filepath = os.path.join(os.path.dirname(__file__), "..", "data", "default_products.csv")
 
 
-
 from pandas import read_csv
 
 #reads the csv file into products variable
@@ -35,12 +34,11 @@ print("---------")
 print("THERE ARE", len(products), "PRODUCTS:")
 print("---------")
 
-for p in products:
-    print("..." + p["name"] + "   " + to_usd(p["price"]))
-
 
 all_prices = []
+
 for p in products:
+    print("..." + p["name"] + "   " + to_usd(p["price"]))
     all_prices.append(float(p["price"]))
 
 import statistics
