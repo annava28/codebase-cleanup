@@ -15,6 +15,16 @@ def determine_winner(user_choice, computer_choice):
     randomly generated choice, to determine the winner in a game
     of Rock, Paper, Scissors. 
     Invoking the function: determine_winner(--variable for user's choice--, --variable for computer choice--)
+    The inputs should be strings of either "rock", "paper", or "scissors". 
+
+    Sample:
+
+    user = "rock" 
+    computer = "scissors"
+
+    determine_winner(user,computer)
+
+    Output: USER WON!     
     """
 
     #return "paper"

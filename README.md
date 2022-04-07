@@ -57,7 +57,14 @@ Run the stocks report:
 python -m app.stocks
 ```
 
-Run the cryptoreport:
+Run the crypto report:
 ```sh
 python -m app.crypto
+```
+
+## Testing 
+
+Testing the code: 
+```sh
+python -m pytest
 ```
