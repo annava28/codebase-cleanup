@@ -10,7 +10,7 @@ import os
 from app.utils import to_usd
 
 basic_filepath = os.path.isfile(os.path.join(os.path.dirname(__file__), "..", "data", "products.csv"))
-defaul
+default_filepath = os.path.join(os.path.dirname(__file__), "..", "data", "default_products.csv")
 
 # checks to see if a products.csv file exists. If not, it uses the default
 if basic_filepath == True:
@@ -18,7 +18,7 @@ if basic_filepath == True:
     csv_filepath = basic_filepath
 else:
     print("USING DEFAULT PRODUCTS CSV FILE...")
-    csv_filepath = os.path.join(os.path.dirname(__file__), "..", "data", "default_products.csv")
+    csv_filepath = default_filepath
 
 
 from pandas import read_csv
