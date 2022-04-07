@@ -20,7 +20,6 @@ else:
     print("USING DEFAULT PRODUCTS CSV FILE...")
     csv_filepath = default_filepath
 
-
 from pandas import read_csv
 
 #reads the csv file into products variable
